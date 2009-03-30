@@ -4,6 +4,12 @@ PostInstall.txt
 README.rdoc
 Rakefile
 lib/g_nested_select.rb
+lib/g_nested_select/view_helpers.rb
+rails_generators/nested_select_assets/nested_select_assets_generator.rb
+rails_generators/nested_select_assets/templates/guilded.nested_select.js
+rails_generators/nested_select_assets/templates/guilded.nested_select.min.js
+rails_generators/nested_select_assets/templates/jquery-nested_select.js
+rails_generators/nested_select_assets/templates/jquery-nested_select.min.js
 script/console
 script/destroy
 script/generate

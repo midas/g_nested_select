@@ -1,32 +1,39 @@
-= g_nested_select
+= g_auto_completer
 
-* FIX (url)
+http://github.com/midas/g_nested_select/tree/master
+
 
 == DESCRIPTION:
 
-FIX (describe your package)
+A Guilded (http://github.com/midas/guilded/tree/master) Rails component that generates a select box and connects it to a parent 
+select box to facilitate a parent child relationship.
 
-== FEATURES/PROBLEMS:
 
-* FIX (list of features or problems)
+== FEATURES:
 
-== SYNOPSIS:
-
-  FIX (code sample of usage)
-
-== REQUIREMENTS:
-
-* FIX (list of requirements)
 
 == INSTALL:
 
-* FIX (sudo gem install, anything else)
+  sudo gem install midas-g_nested_select
+
+
+== USAGE:
+
+
+
+
+== REQUIREMENTS:
+
+* Rails >= 2.2.0
+* Guilded >= 0.2.0 (http://github.com/midas/guilded/tree/master)
+
+
 
 == LICENSE:
 
 (The MIT License)
 
-Copyright (c) 2009 FIXME full name
+Copyright (c) 2009 C. Jason Harrelson (midas)
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the
