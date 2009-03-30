@@ -19,14 +19,60 @@ select box to facilitate a parent child relationship.
 
 == USAGE:
 
+  <% form_for @car do |f| %>
+    ...
+    
+    <%= f.select :vehicle_make_id, VehicleMake.to_select_collection, :id => 'car_vehicle_make_id' %>
+
+    <%= g_nested_select f, :vehicle_model_id, :mappings => VehicleModel.to_select_collection, :include_blank => true, 
+          :parent_id => 'car_vehicle_make_id', :mapping_type => :html 
+  <% end %>
+
+Where VehicleModel.to_select_collection returns either:
+
+  [
+    ['Toyota', [['Camry',1],['Corola',2]]], ['Volvo', [['S40',3],['S60',4]]]
+  ]
+
+or
+
+  {
+    'Toyota' => [['Camry',1],['Corola',2]], 'Volvo' => [['S40',3],['S60',4]]
+  }
+
+When JavaScript is disabled, the above will result in:
+
+  <select id="ticket_vehicle_model_id" name="ticket[vehicle_model_id]">
+    <option value=""/>
+    <optgroup label="Toyota">
+      <option value="1">Camry</option>
+      <option value="2">Corola</option>
+    </optgroup>
+    <optgroup label="Volvo">
+      <option value="3">S40</option>
+      <option value="4">S60</option>
+    </optgroup>
+  </select>
+
+When JavaScript is enabled the vehicle model id select control will be loaded with the vehicle models that are related to
+what is currently selected in the vehicle make id select box.  If there is nothing selected yet, then the vehicle model id 
+select box will be empty and will not populate until the vehicle make is selected.
+
+If you open an edit view and there is already a value selected for both the vehicle make and vehicle model the vehicle model
+selection will automatically select the correct value once it has loaded the nested options.
 
 
+== OPTIONS:
+
+* :mappings (required) - A collection suitable for creating a nested drop down (see example usage above for details).
+* :include_blank - When true, includes an empty option at top of select box, otherwise does not.  Defaults to false.
+* :parent_id (required) - The id of the parent select box that the nested select box's values will be loaded based on.
+* :mapping_type - 
 
 == REQUIREMENTS:
 
 * Rails >= 2.2.0
 * Guilded >= 0.2.0 (http://github.com/midas/guilded/tree/master)
-
 
 
 == LICENSE:

@@ -1,7 +1,5 @@
 
-For more information on g_nested_select, see http://g_nested_select.rubyforge.org
+For more information on g_nested_select, see http://github.com/midas/g_nested_select/tree/master
 
-NOTE: Change this information in PostInstall.txt 
-You can also delete it if you don't want it.
 
 
