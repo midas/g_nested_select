@@ -67,7 +67,8 @@ selection will automatically select the correct value once it has loaded the nes
 * :mappings (required) - A collection suitable for creating a nested drop down (see example usage above for details).
 * :include_blank - When true, includes an empty option at top of select box, otherwise does not.  Defaults to false.
 * :parent_id (required) - The id of the parent select box that the nested select box's values will be loaded based on.
-* :mapping_type - 
+* :mapping_type - :lookup for JavaScipt to generate the HTML from the lookup object that comes over form the server.
+    :html for the server to generate the html server side and send it over.  Defaults to :lookup.
 
 == REQUIREMENTS:
 
