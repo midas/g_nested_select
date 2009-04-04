@@ -16,6 +16,14 @@ select box to facilitate a parent child relationship.
 
   sudo gem install midas-g_nested_select
 
+In rails environment.rb file:
+
+  config.gem 'midas-g_nested_select', :version => "1.0.1", :lib => 'g_nested_select', :source => 'http://gems.github.com'
+
+Generate:
+
+  script/generate nested_select_assets
+
 
 == USAGE:
 
@@ -69,6 +77,7 @@ selection will automatically select the correct value once it has loaded the nes
 * :parent_id (required) - The id of the parent select box that the nested select box's values will be loaded based on.
 * :mapping_type - :lookup for JavaScipt to generate the HTML from the lookup object that comes over form the server.
     :html for the server to generate the html server side and send it over.  Defaults to :lookup.
+
 
 == REQUIREMENTS:
 
